@@ -1,0 +1,19 @@
+select count(distinct CustomerID) 
+from Transactions 
+where CustomerID not in 
+(select distinct CustomerID from Requests)
+
+
+
+
+select count(distinct CustomerID)
+from Transactions
+where Region in ('NE', 'SW')
+and 
+where CustomerID not in 
+(select distinct CustomerID from Requests
+where ProductID in ('Auto', 'Electronic', 'Food')
+)
+
+
+
